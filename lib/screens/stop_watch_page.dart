@@ -25,7 +25,7 @@ class _StopWatchPageState extends State<StopWatchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('StopWatc'),
+        title: const Text('StopWatch'),
       ),
       body: _buildBody(),
       bottomNavigationBar: BottomAppBar(
@@ -37,8 +37,9 @@ class _StopWatchPageState extends State<StopWatchPage> {
         onPressed: () => setState(() {
           _clickButton();
         }),
-        child:
-            _isRunning ? const Icon(Icons.pause) : const Icon(Icons.play_arrow),
+        child: _isRunning
+            ? const Icon(Icons.pause)
+            : const Icon(Icons.play_arrow),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
